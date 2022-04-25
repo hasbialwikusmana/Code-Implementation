@@ -33,8 +33,8 @@ const cekPromo = (harga, voucher) => {
 const cekOngkir = (jarak) => {
   if (jarak <= 2) {
     ongkir = 5000;
-  } else if (jarak.toFixed() > 2) {
-    ongkir = 5000 + (jarak.toFixed() - 2) * 3000;
+  } else if (jarak > 2) {
+    ongkir = 5000 + (jarak - 2) * 3000;
   }
   return ongkir;
 };
@@ -48,4 +48,5 @@ const cekPajak = (harga, pajak) => {
   return ppn;
 };
 
-pijarFood(75000, "PIJARFOOD5", 5.5, true);
+pijarFood(75000, "PIJARFOOD5", 5, true);
+// pijarFood(75000, "DITRAKTIRPIJAR", 5, true);
