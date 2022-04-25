@@ -11,6 +11,10 @@ const pijarFood = (harga, voucher, jarak, pajak) => {
   console.log(`Subtotal     : ${subtotal}`);
 };
 
+let potongan = 0;
+let ppn = 0;
+let ongkir = 0;
+
 const cekPromo = (harga, voucher) => {
   if (voucher === "PIJARFOOD5" && harga >= 50000) {
     if ((harga * 50) / 100 <= 50000) {
@@ -24,8 +28,6 @@ const cekPromo = (harga, voucher) => {
     } else {
       potongan = 25000;
     }
-  } else {
-    potongan = 0;
   }
   return potongan;
 };
@@ -42,11 +44,9 @@ const cekOngkir = (jarak) => {
 const cekPajak = (harga, pajak) => {
   if (pajak) {
     ppn = (harga * 5) / 100;
-  } else {
-    ppn = 0;
   }
   return ppn;
 };
-
 pijarFood(75000, "PIJARFOOD5", 5, true);
+pijarFood(75000, "PIJARFOODs5", 5, false);
 // pijarFood(75000, "DITRAKTIRPIJAR", 5, true);
