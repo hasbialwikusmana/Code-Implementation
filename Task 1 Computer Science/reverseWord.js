@@ -6,4 +6,4 @@ const reverseWord = (str) => {
     console.log(result);
   }
 };
-reverseWord("");
+reverseWord("Saya Belajar Javascript");
