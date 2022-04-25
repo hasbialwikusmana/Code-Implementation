@@ -3,15 +3,13 @@ const divideAndSort = (num) => {
     console.log("input data dengan tipe data Number");
   } else {
     const numStr = num.toString().split("0");
-    const numMap = numStr
-      .map((item) =>
-        item
-          .split("")
-          .sort((a, b) => a - b)
-          .join("")
-      )
-      .join("");
-    const numHasil = parseInt(numMap);
+    const numMap = numStr.map((item) =>
+      item
+        .split("")
+        .sort((a, b) => a - b)
+        .join("")
+    );
+    const numHasil = parseInt(numMap.join(""));
     console.log(numHasil);
     // console.log(numStr);
   }
