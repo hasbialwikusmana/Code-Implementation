@@ -14,4 +14,4 @@ const palindrome = (str) => {
   }
 };
 
-palindrome("malam");
+palindrome("kasur rusak");
